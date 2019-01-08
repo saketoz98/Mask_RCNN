@@ -76,7 +76,7 @@ class PotholeConfig(Config):
 
     IMAGE_CHANNEL_COUNT = 1
 
-    MEAN_PIXEL = np.array([0])
+    MEAN_PIXEL = np.array([100])
 
 
 
