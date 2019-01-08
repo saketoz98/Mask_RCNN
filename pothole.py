@@ -74,10 +74,6 @@ class PotholeConfig(Config):
     # Skip detections with < 90% confidence
     DETECTION_MIN_CONFIDENCE = 0.85
 
-    IMAGE_CHANNEL_COUNT = 1
-
-    MEAN_PIXEL = np.array([100])
-
 
 
 
@@ -359,7 +355,7 @@ if __name__ == '__main__':
     if args.weights.lower() == "coco":
         # Exclude the last layers because they require a matching
         # number of classes
-        model.load_weights(weights_path, by_name=True, exclude=["conv1",
+        model.load_weights(weights_path, by_name=True, exclude=[
             "mrcnn_class_logits", "mrcnn_bbox_fc",
             "mrcnn_bbox", "mrcnn_mask"])
     else:
