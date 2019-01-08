@@ -72,7 +72,13 @@ class PotholeConfig(Config):
     STEPS_PER_EPOCH = 100
 
     # Skip detections with < 90% confidence
-    DETECTION_MIN_CONFIDENCE = 0.75
+    DETECTION_MIN_CONFIDENCE = 0.85
+
+    IMAGE_CHANNEL_COUNT = 1
+
+    MEAN_PIXEL = np.array([0])
+
+
 
 
 ############################################################
